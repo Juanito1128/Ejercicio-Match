@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Programa Interactivo</title>
+</head>
+<body>
+    <h1>Ejemplo de Programa Interactivo en JavaScript</h1>
+    <script>
+        // Funciones JavaScript (pegar aquí el código optimizado)
+        function mostrarBienvenida() {
+            let mensajeInicial = "Bienvenido al programa";
+            console.log(mensajeInicial);
+
+            let nombre = "Carmen";
+            console.log(`¡Hola, ${nombre}!`);
+            alert(`¡Hola, ${nombre}!`);
+            return nombre;
+        }
+
+        function preguntarLenguajeFavorito() {
+            let lenguaje = prompt("¿Cuál es el lenguaje de programación que más te gusta?");
+            console.log(`Lenguaje favorito: ${lenguaje}`);
+            alert(`¡Qué gusto saber que tu lenguaje de programación favorito es ${lenguaje}!`);
+        }
+
+        function realizarOperaciones() {
+            const valor1 = parseFloat(prompt("Introduce el primer número"));
+            const valor2 = parseFloat(prompt("Introduce el segundo número"));
+
+            if (isNaN(valor1) || isNaN(valor2)) {
+                console.log("Por favor, ingresa números válidos.");
+                return;
+            }
+
+            let resultadoSuma = valor1 + valor2;
+            console.log(`Resultado de la suma: ${resultadoSuma}`);
+
+            let resultadoResta = valor1 - valor2;
+            console.log(`Resultado de la resta: ${resultadoResta}`);
+        }
+
+        function verificarEdad(nombre) {
+            let edad = parseInt(prompt(`¡Hola, ${nombre}! Por favor, indícame tu edad`));
+            
+            if (isNaN(edad)) {
+                alert("Por favor, ingresa una edad válida.");
+            } else if (edad < 18) {
+                alert("Eres menor de edad, ya es hora de dormir, mañana tienes que ir a la escuela.");
+            } else {
+                alert("Eres mayor de edad, es hora ir a la cama, mañana hay que trabajar.");
+            }
+        }
+
+        function verificarNumeroAzar() {
+            let numeroAzar = parseFloat(prompt("Dime un número"));
+
+            if (isNaN(numeroAzar)) {
+                alert("Por favor, ingresa un número válido.");
+            } else if (numeroAzar < 0) {
+                alert("El número es negativo.");
+            } else if (numeroAzar > 0) {
+                alert("El número es positivo.");
+            } else {
+                alert("El número es cero.");
+            }
+        }
+
+        function mostrarConteo() {
+            let conteo = 1;
+            while (conteo <= 10) {
+                console.log(conteo);
+                conteo++;
+            }
+        }
+
+        function verificarCalificacion() {
+            let nota = parseFloat(prompt("Introduce la calificación"));
+
+            if (isNaN(nota)) {
+                alert("Por favor, ingresa un valor numérico para la calificación.");
+            } else if (nota >= 7) {
+                alert("Aprobado.");
+            } else {
+                alert("Reprobado.");
+            }
+        }
+
+        function generarNumerosAleatorios() {
+            let numeroAleatorio = Math.random();
+            console.log("Número aleatorio entre 0 y 1:", numeroAleatorio);
+
+            let numeroAleatorio1a10 = Math.floor(Math.random() * 10) + 1;
+            console.log("Número entero aleatorio entre 1 y 10:", numeroAleatorio1a10);
+
+            let numeroAleatorio1a1000 = Math.floor(Math.random() * 1000) + 1;
+            console.log("Número entero aleatorio entre 1 y 1000:", numeroAleatorio1a1000);
+        }
+
+        // Ejecutar las funciones
+        let nombreUsuario = mostrarBienvenida();
+        preguntarLenguajeFavorito();
+        realizarOperaciones();
+        verificarEdad(nombreUsuario);
+        verificarNumeroAzar();
+        mostrarConteo();
+        verificarCalificacion();
+        generarNumerosAleatorios();
+    </script>
+</body>
+</html>
